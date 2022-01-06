@@ -49,7 +49,7 @@ function Home() {
                   onAddPizzaToCart={addPizzaHandler}
                   key={pizza.id}
                   {...pizza}
-                  cartItems={cartItems[pizza.id]}
+                  cartItems={cartItems[pizza.id] ? cartItems[pizza.id].items : null}
                 />
               ))
             : Arr.map((_, index) => <LoadingBlock key={index} />)}
