@@ -30,6 +30,14 @@ function cartReducer(state = initialState, action) {
         totalCount: allPizzas.length,
         totalPrice: getTotalPrice(allPizzas),
       };
+
+    case 'CLEAR_CART':
+      return {
+        items: {},
+        totalPrice: 0,
+        totalCount: 0,
+      };
+
     default:
       return state;
   }
